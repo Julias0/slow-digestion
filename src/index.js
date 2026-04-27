@@ -54,7 +54,7 @@ async function swiggyOrderSummaryParse() {
         const hyperlinksRegex = /https?:\/\/[^\s]+/g;
         const hyperlinks = data.text.match(hyperlinksRegex);
 
-        const filePromises = hyperlinks.flat()
+        const filePromises = hyperlinks
             .map(hyperlink => fetch(hyperlink.replace(/[)\]\}>.,]+$/, '').trim(), {
                 headers: {
                     'Content-Type': 'application/json',
